@@ -1,6 +1,9 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 [project]
-name = "spectree"
-version = "1.1.4"
+name = "spectree-pydantic-v2"
+version = "0.1.0"
 dynamic = []
 description = "generate OpenAPI document and validate request&response with Python annotations."
 readme = "README.md"
@@ -36,6 +39,13 @@ dev = [
     "pre-commit",
     "pytest~=7.1",
     "syrupy>=4.0",
+]
+pydantic1 = [
+    "pydantic>=1.2,<2",
+]
+pydantic2 = [
+    "pydantic>=2.0",
+    "pydantic-settings",
 ]
 email = [
     "pydantic[email]>=2.0",
