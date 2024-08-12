@@ -12,6 +12,7 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.responses import Response as StarletteResponse
 from starlette.routing import compile_path
 
+from .._pydantic import ValidationError
 from .._types import ModelType
 from ..response import Response
 from .base import BasePlugin, Context
